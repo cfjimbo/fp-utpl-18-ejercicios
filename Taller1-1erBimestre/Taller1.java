@@ -28,7 +28,7 @@ public class Taller1 {
         String cadena_final; 
         cadena_final= String.format("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n", "Persona", "Pasajes", "Bar", "Salidas", "Total");
         System.out.printf("Gastos Familia\n");
-        System.out.println("Ingrese el nÃºmero de los hijos");
+        System.out.println("Ingrese el número de los hijos");
         cantidad = entrada.nextInt();
         
         for (int contador = 1; contador <= cantidad; contador++){
