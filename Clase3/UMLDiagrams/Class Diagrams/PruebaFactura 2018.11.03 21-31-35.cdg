@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PruebaFactura">
+  <ClassDiagramComponents>
+    <Class name="Factura" package="pruebafactura" visibility="public" xPosition="20.0" yPosition="31.0">
+      <Fields>
+        <Field name="numPieza" type="String" visibility="package"/>
+        <Field name="descPieza" type="String" visibility="package"/>
+        <Field name="cantArticulos" type="int" visibility="package"/>
+        <Field name="precioxArt" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="numPieza"/>
+          <Argument type="String" name="descPieza"/>
+          <Argument type="int" name="cantArticulos"/>
+          <Argument type="double" name="precioxArt"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumPieza" returnType="String" visibility="public"/>
+        <Method name="setNumPieza" returnType="void" visibility="public">
+          <Argument type="String" name="numPieza"/>
+        </Method>
+        <Method name="getDescPieza" returnType="String" visibility="public"/>
+        <Method name="setDescPieza" returnType="void" visibility="public">
+          <Argument type="String" name="descPieza"/>
+        </Method>
+        <Method name="getCantArticulos" returnType="int" visibility="public"/>
+        <Method name="setCantArticulos" returnType="void" visibility="public">
+          <Argument type="int" name="cantArticulos"/>
+        </Method>
+        <Method name="getPrecioxArt" returnType="double" visibility="public"/>
+        <Method name="setPrecioxArt" returnType="void" visibility="public">
+          <Argument type="double" name="precioxArt"/>
+        </Method>
+        <Method name="obtenerMontoFactura" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PruebaFactura" package="pruebafactura" visibility="public" xPosition="483.0" yPosition="31.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

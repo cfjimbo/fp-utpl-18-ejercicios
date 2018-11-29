@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Pruebacomplejo">
+  <ClassDiagramComponents>
+    <Class name="Complejo" package="pruebacomplejo" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="numReal" type="double" visibility="private"/>
+        <Field name="numImag" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="numReal"/>
+          <Argument type="double" name="numImag"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumReal" returnType="double" visibility="public"/>
+        <Method name="setNumReal" returnType="void" visibility="public">
+          <Argument type="double" name="numReal"/>
+        </Method>
+        <Method name="getNumImag" returnType="double" visibility="public"/>
+        <Method name="setNumImag" returnType="void" visibility="public">
+          <Argument type="double" name="numImag"/>
+        </Method>
+        <Method name="sumar" returnType="Complejo" visibility="public">
+          <Argument type="Complejo" name="a"/>
+        </Method>
+        <Method name="restar" returnType="Complejo" visibility="public">
+          <Argument type="Complejo" name="c"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pruebacomplejo" package="pruebacomplejo" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="pruebacomplejo.Complejo" target="pruebacomplejo.Complejo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

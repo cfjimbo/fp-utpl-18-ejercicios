@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Principal">
+  <ClassDiagramComponents>
+    <Class name="Atacantes" package="principal" visibility="public" xPosition="37.0" yPosition="20.0">
+      <Fields>
+        <Field name="gol" type="int[]" visibility="package"/>
+        <Field name="pase" type="int[]" visibility="package"/>
+        <Field name="recuperar" type="int[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="goles"/>
+          <Argument type="int" name="pases"/>
+          <Argument type="int" name="balonesRecuperados"/>
+          <Argument type="int" name="aux"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="valoracion" returnType="int" visibility="public"/>
+        <Method name="getGol" returnType="int[]" visibility="public"/>
+        <Method name="setGol" returnType="void" visibility="public">
+          <Argument type="int" name="gol"/>
+          <Argument type="int" name="aux"/>
+        </Method>
+        <Method name="getPase" returnType="int[]" visibility="public"/>
+        <Method name="setPase" returnType="void" visibility="public">
+          <Argument type="int" name="pase"/>
+          <Argument type="int" name="aux"/>
+        </Method>
+        <Method name="getRecuperar" returnType="int[]" visibility="public"/>
+        <Method name="setRecuperar" returnType="void" visibility="public">
+          <Argument type="int" name="recuperar"/>
+          <Argument type="int" name="aux"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Defensores" package="principal" visibility="public" xPosition="297.0" yPosition="249.0">
+      <Fields>
+        <Field name="gol1" type="int[]" visibility="package"/>
+        <Field name="pase1" type="int[]" visibility="package"/>
+        <Field name="recuperar1" type="int[]" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="goles"/>
+          <Argument type="int" name="pases"/>
+          <Argument type="int" name="balonesRecuperados"/>
+          <Argument type="int" name="aux"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="valoracion" returnType="int" visibility="public"/>
+        <Method name="getGol" returnType="int[]" visibility="public"/>
+        <Method name="setGol1" returnType="void" visibility="public">
+          <Argument type="int" name="gol"/>
+          <Argument type="int" name="aux"/>
+        </Method>
+        <Method name="getPase1" returnType="int[]" visibility="public"/>
+        <Method name="setPase1" returnType="void" visibility="public">
+          <Argument type="int" name="pase"/>
+          <Argument type="int" name="aux"/>
+        </Method>
+        <Method name="getRecuperar1" returnType="int[]" visibility="public"/>
+        <Method name="setRecuperar1" returnType="void" visibility="public">
+          <Argument type="int" name="recuperar"/>
+          <Argument type="int" name="aux"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Equipo" package="principal" visibility="public" xPosition="486.0" yPosition="3.0">
+      <Fields>
+        <Field name="nombre" type="String[]" visibility="package"/>
+        <Field name="numero" type="int[]" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="listaJugadores" returnType="void" visibility="public"/>
+        <Method name="presentarEquipo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugadores" package="principal" visibility="public" isAbstract="true" xPosition="814.0" yPosition="20.0">
+      <Fields>
+        <Field name="goles" type="int" visibility="protected"/>
+        <Field name="pases" type="int" visibility="protected"/>
+        <Field name="balonesRecuperados" type="int" visibility="protected"/>
+        <Field name="atajadas" type="int" visibility="protected"/>
+        <Field name="aux" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="atajadas"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="goles"/>
+          <Argument type="int" name="pases"/>
+          <Argument type="int" name="balonesRecuperados"/>
+          <Argument type="int" name="aux"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="valoracion" returnType="int" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Porteros" package="principal" visibility="public" xPosition="804.0" yPosition="344.0">
+      <Fields>
+        <Field name="atajads" type="int" visibility="package"/>
+        <Field name="valortotal" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="atajadas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="valoracion" returnType="int" visibility="public"/>
+        <Method name="getAtajads" returnType="int" visibility="public"/>
+        <Method name="setAtajads" returnType="void" visibility="public">
+          <Argument type="int" name="atajads"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="principal" visibility="public" xPosition="83.0" yPosition="353.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="principal.Jugadores" target="principal.Equipo"/>
+    <IsRelation name="is" source="principal.Porteros" target="principal.Jugadores"/>
+    <IsRelation name="is" source="principal.Defensores" target="principal.Jugadores"/>
+    <IsRelation name="is" source="principal.Atacantes" target="principal.Jugadores"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

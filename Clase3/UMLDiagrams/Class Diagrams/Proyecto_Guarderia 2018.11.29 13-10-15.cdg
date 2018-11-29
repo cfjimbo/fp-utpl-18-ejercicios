@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Proyecto_Guarderia">
+  <ClassDiagramComponents>
+    <Class name="Personal_Escuela" package="proyecto_escuela" visibility="public" isAbstract="true" xPosition="399.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="public"/>
+        <Field name="edad" type="int" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Registrar" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Profesores" package="proyecto_escuela" visibility="public" xPosition="59.0" yPosition="245.0">
+      <Fields>
+        <Field name="hora_entrada" type="int" visibility="package"/>
+        <Field name="materia" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="materia"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="int" name="hora_entrada"/>
+          <Argument type="int" name="hora_salida"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Registrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estudiantes" package="proyecto_escuela" visibility="public" xPosition="668.0" yPosition="20.0">
+      <Fields>
+        <Field name="hora_entrada" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="int" name="hora_entrada"/>
+          <Argument type="int" name="hora_salida"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Registrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Servicio" package="proyecto_escuela" visibility="public" xPosition="579.0" yPosition="416.0">
+      <Fields>
+        <Field name="hora_entrada" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="hora_entrada"/>
+          <Argument type="int" name="hora_salida"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Registrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Director_Area" package="proyecto_escuela" visibility="public" xPosition="746.0" yPosition="221.0">
+      <Fields>
+        <Field name="seccion" type="String" visibility="package"/>
+        <Field name="hora_entrada" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="seccion"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="int" name="hora_entrada"/>
+          <Argument type="int" name="hora_salida"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Registrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Proyecto_Escuela" package="proyecto_escuela" visibility="public" xPosition="26.0" yPosition="47.0">
+      <Fields>
+        <Field name="personal" type="ArrayList&lt;Personal_Escuela&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="proyecto_escuela.Director_Area" target="proyecto_escuela.Personal_Escuela"/>
+    <IsRelation name="is" source="proyecto_escuela.Estudiantes" target="proyecto_escuela.Personal_Escuela"/>
+    <HasRelation name="personal" source="proyecto_escuela.Proyecto_Escuela" target="proyecto_escuela.Personal_Escuela" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Personal_Escuela&gt;"/>
+    <IsRelation name="is" source="proyecto_escuela.Profesores" target="proyecto_escuela.Personal_Escuela"/>
+    <IsRelation name="is" source="proyecto_escuela.Servicio" target="proyecto_escuela.Personal_Escuela"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
