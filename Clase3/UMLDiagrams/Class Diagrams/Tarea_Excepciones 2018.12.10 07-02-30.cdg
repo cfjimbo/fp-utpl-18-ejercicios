@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Tarea_Excepciones">
+  <ClassDiagramComponents>
+    <Class name="Banco" package="tarea_excepciones" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cuentas" type="ArrayList&lt;Cuenta_Ahorros&gt;" visibility="public" isStatic="true"/>
+        <Field name="cuenta1" type="ArrayList&lt;Cuenta_Cheques&gt;" visibility="public" isStatic="true"/>
+        <Field name="cuenta2" type="ArrayList&lt;Cuenta_Platino&gt;" visibility="public" isStatic="true"/>
+        <Field name="cuentaAhorro" type="Cuenta_Ahorros" visibility="package" isStatic="true"/>
+        <Field name="cuentaCheques" type="Cuenta_Cheques" visibility="package" isStatic="true"/>
+        <Field name="cuentaPlatino" type="Cuenta_Platino" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cuentas_Banco" package="tarea_excepciones" visibility="public" xPosition="457.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="num_cuenta" type="String" visibility="package"/>
+        <Field name="interes" type="double" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="num_cuenta"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Cuenta_Ahorros" package="tarea_excepciones" visibility="public" xPosition="397.0" yPosition="334.0">
+      <Fields>
+        <Field name="retiro" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="num_cuenta"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="retiro" returnType="double" visibility="public">
+          <Argument type="double" name="saldo"/>
+          <Argument type="double" name="retiro"/>
+          <Argument type="double" name="interes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cuenta_Cheques" package="tarea_excepciones" visibility="public" xPosition="20.0" yPosition="334.0">
+      <Fields>
+        <Field name="saldo" type="double" visibility="package"/>
+        <Field name="retiro" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="num_cuenta"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="retiro" returnType="double" visibility="public">
+          <Argument type="double" name="saldo"/>
+          <Argument type="double" name="retiro"/>
+          <Argument type="double" name="interes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cuenta_Platino" package="tarea_excepciones" visibility="public" xPosition="776.0" yPosition="217.0">
+      <Fields>
+        <Field name="saldo" type="double" visibility="package"/>
+        <Field name="retiro" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="num_cuenta"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="retiro" returnType="double" visibility="public">
+          <Argument type="double" name="saldo"/>
+          <Argument type="double" name="retiro"/>
+          <Argument type="double" name="interes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Tarea_A_Exception" package="tarea_excepciones" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cuenta2" source="tarea_excepciones.Banco" target="tarea_excepciones.Cuenta_Platino" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Cuenta_Platino&gt;"/>
+    <IsRelation name="is" source="tarea_excepciones.Cuenta_Ahorros" target="tarea_excepciones.Cuentas_Banco"/>
+    <HasRelation name="cuentaCheques" source="tarea_excepciones.Banco" target="tarea_excepciones.Cuenta_Cheques" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="tarea_excepciones.Cuenta_Cheques" target="tarea_excepciones.Cuentas_Banco"/>
+    <HasRelation name="cuentas" source="tarea_excepciones.Banco" target="tarea_excepciones.Cuenta_Ahorros" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Cuenta_Ahorros&gt;"/>
+    <HasRelation name="cuentaAhorro" source="tarea_excepciones.Banco" target="tarea_excepciones.Cuenta_Ahorros" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cuentaPlatino" source="tarea_excepciones.Banco" target="tarea_excepciones.Cuenta_Platino" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="tarea_excepciones.Cuenta_Platino" target="tarea_excepciones.Cuentas_Banco"/>
+    <HasRelation name="cuenta1" source="tarea_excepciones.Banco" target="tarea_excepciones.Cuenta_Cheques" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Cuenta_Cheques&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

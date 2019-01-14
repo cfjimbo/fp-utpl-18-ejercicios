@@ -1,4 +1,3 @@
-
 package proyecto_escuela;
 
 import java.util.ArrayList;
@@ -24,8 +23,7 @@ public class Proyecto_Escuela {
         boolean salir = false;
         int op;
         while (!salir) {
-            System.out.println("********REGISTRO ESCUELA 18 DE NOVIEMBRE*********");
-            System.out.println("********MENÚ**********");
+            System.out.printf("%80s\n%70s\n","Escuela 18 de Noviembre","MENÚ");
             System.out.println("¿Desea saber las horas de su asistencia?.\nSeleccione a que parte de la escuela corresponde");
             System.out.println("Alumno [1]");
             System.out.println("Profesores [2]");
@@ -37,6 +35,7 @@ public class Proyecto_Escuela {
                 switch (op) {
                     case 1:
                         alumno.Registrar();
+                        //personal.get(0).Registrar();
                         break;
                     case 2:
                         profesores.Registrar();
@@ -53,8 +52,8 @@ public class Proyecto_Escuela {
                         System.out.println("Salió del Menú.\nFINALIZADO");
                         break;
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Debes insertar un número");
+            } catch (InputMismatchException inputMismatchException) {
+                System.out.println("Debes ingresar un número");
                 leer.next();
             }
         }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="tarea_excepciones1">
+  <ClassDiagramComponents>
+    <Class name="Personas_Aula" package="tarea_excepciones1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="entrada" type="Scanner" visibility="package"/>
+        <Field name="numEstu" type="int" visibility="package"/>
+        <Field name="nombreEstu" type="String[]" visibility="package"/>
+        <Field name="nombreProfe" type="String[]" visibility="package"/>
+        <Field name="sexoEstu" type="String[]" visibility="package"/>
+        <Field name="sexoProfe" type="String[]" visibility="package"/>
+        <Field name="edadEstu" type="int[]" visibility="package"/>
+        <Field name="edadProfe" type="int[]" visibility="package"/>
+        <Field name="paralelos" type="String[][]" visibility="package"/>
+        <Field name="nota" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="ingresarDatos" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="ingresarDatos1" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="horario" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estudiantes" package="tarea_excepciones1" visibility="public" xPosition="279.0" yPosition="20.0">
+      <Fields>
+        <Field name="esca" type="Scanner" visibility="package"/>
+        <Field name="notasMate" type="int[]" visibility="package"/>
+        <Field name="notasFisica" type="int[]" visibility="package"/>
+        <Field name="notasFilo" type="int[]" visibility="package"/>
+        <Field name="promedio" type="int[]" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="notas" returnType="void" visibility="public"/>
+        <Method name="promedio" returnType="void" visibility="public"/>
+        <Method name="presentarResultasdos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Profesores" package="tarea_excepciones1" visibility="public" xPosition="290.0" yPosition="296.0">
+      <Fields>
+        <Field name="sc1" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="disponibilidad" returnType="boolean" visibility="public"/>
+        <Method name="motivo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Paralelo" package="tarea_excepciones1" visibility="public" xPosition="517.0" yPosition="20.0">
+      <Fields>
+        <Field name="sc2" type="Scanner" visibility="package"/>
+        <Field name="asis_Mate" type="int[]" visibility="package"/>
+        <Field name="asis_Fisica" type="int[]" visibility="package"/>
+        <Field name="asis_Filosofia" type="int[]" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="paralelo" returnType="void" visibility="public">
+          <Argument type="String" name="materia"/>
+        </Method>
+        <Method name="paralelo1" returnType="void" visibility="public">
+          <Argument type="String" name="materia"/>
+        </Method>
+        <Method name="paralelo2" returnType="void" visibility="public">
+          <Argument type="String" name="materia"/>
+        </Method>
+        <Method name="Asistencia" returnType="void" visibility="public">
+          <Argument type="String" name="materia"/>
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="presentar" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Test_Personas_Aula" package="tarea_excepciones1" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="Aula" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="cont"/>
+          <Argument type="int" name="op"/>
+          <Argument type="String" name="materia"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="tarea_excepciones1.Paralelo" target="tarea_excepciones1.Estudiantes"/>
+    <IsRelation name="is" source="tarea_excepciones1.Profesores" target="tarea_excepciones1.Personas_Aula"/>
+    <IsRelation name="is" source="tarea_excepciones1.Estudiantes" target="tarea_excepciones1.Personas_Aula"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

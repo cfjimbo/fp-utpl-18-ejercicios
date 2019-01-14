@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package recursividad;
 
 import java.util.Scanner;
@@ -21,9 +16,16 @@ public class Recursividad_Finocacci {
         }
         System.out.println("\nLa función Fibonacci de " + num + " es: " + funcionFibonacci(num));
     }
-
+    
+    public static int Recursivo1(int num){
+        if (num <= 0)
+            return 0;
+        Recursivo1(num-1);
+        return num;
+    }
+    
     public static int funcionFibonacci(int num) {
-        if (num == 0 || num == 1) {
+        if (num == 0 || num == 1) { // caso base
             return num;
         } else {
             if (num == 2) {
